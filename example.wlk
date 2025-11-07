@@ -32,4 +32,10 @@ class ExcursionesACiudadTropical inherits ExcursionACiudad{
 }
   
 
-class SalidaDeTrekking inherits Viajes{}
+class SalidaDeTrekking inherits Viajes{
+  const kilometros
+  const diasDeSol
+  override method cuantosDiasLleva() = kilometros/50
+  override method implicaEsfuerzo() = kilometros>80
+  override method sirveParaBroncearse() = 100>diasDeSol and kilometros>120 
+}
