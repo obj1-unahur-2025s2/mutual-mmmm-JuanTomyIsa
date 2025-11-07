@@ -10,6 +10,8 @@ class Viajes{//{}
   method sirveParaBroncearse()
 
   method cuantosDiasLleva() 
+
+  method esInteresante() = idiomas.size() > 1
 } 
 
 class ViajeDePlaya inherits Viajes{
@@ -24,6 +26,9 @@ class ExcursionACiudad inherits Viajes{
   override method cuantosDiasLleva() = atracciones/2
   override method implicaEsfuerzo() = 5 >=atracciones>= 8
   override method sirveParaBroncearse() = false
+
+  override method esInteresante() = super() or atracciones == 5
+
 }
 
 class ExcursionesACiudadTropical inherits ExcursionACiudad{
@@ -38,4 +43,6 @@ class SalidaDeTrekking inherits Viajes{
   override method cuantosDiasLleva() = kilometros/50
   override method implicaEsfuerzo() = kilometros>80
   override method sirveParaBroncearse() = 100>diasDeSol and kilometros>120 
+
+  override method esInteresante() = super() and diasDeSol > 140
 }
