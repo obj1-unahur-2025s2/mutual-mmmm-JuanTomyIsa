@@ -1,3 +1,5 @@
+//si suer ntiene arametro al suer>() asarle arametro
+
 class Viajes{//{}
   const idiomas = new List()
 
@@ -46,3 +48,5 @@ class SalidaDeTrekking inherits Viajes{
 
   override method esInteresante() = super() and diasDeSol > 140
 }
+
+object clasesDeGimnasia{}
